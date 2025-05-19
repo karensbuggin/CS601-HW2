@@ -1,4 +1,5 @@
 
+//Fetch JSON data from web 
 async function fetchMedia() {
     const apiURL = "https://karensbuggin.github.io/CS601-HW2/media.json"
 
@@ -27,11 +28,11 @@ const btn = document.getElementById('loadCanvasButton')
         // make images draggable
         img.draggable = true;
 
-        //set random ID number for each media item
+        //Set random img ID
         const randomNumber = Math.floor(Math.random() * 1000) + 1;
         img.id = `${media.category}-${randomNumber}`;  
 
-        //Dragstart event to transfer data for each element
+        //Dragstart event transfers data 
         img.addEventListener('dragstart', e =>{
             e.dataTransfer.setData('text/plain', img.id);
         })
@@ -44,45 +45,46 @@ const btn = document.getElementById('loadCanvasButton')
 
 /*Choose correct img source based on media ID*/
 export function getImage(mediaID){
-    const img = document.createElement('img'); //<img></img>
+    const img = document.createElement('img'); 
     img.id = mediaID;
 
     switch (mediaID) {
         case '001':
-            img.src = './Assets/Sula.jpg'
+            img.src = './Assets/Sula.jpg';
             break;
         case '002':
-            img.src = './Assets/theFourWinds.jpg'
+            img.src = './Assets/theFourWinds.jpg';
             break;
         case '003':
-            img.src = './Assets/percyJackson.jpg'
+            img.src = './Assets/percyJackson.jpg';
             break;
 
         case '004':
-            img.src = './Assets/Dune.jpg'
+            img.src = './Assets/Dune.jpg';
             break;
 
         case '005':
-            img.src = './Assets/theBluestEye.jpg'
+            img.src = './Assets/prideAndPrejudice.jpg';
             break;
 
         case '006':
-            img.src = './Assets/EETAAO.jpg'
+            img.src = './Assets/EETAAO.jpg';
             break;
 
         case '007':
-            img.src = './Assets/Barbie.jpeg'
+            img.src = './Assets/Barbie.jpeg';
             break;
         case '008':
-            img.src = './Assets/mickey17.jpg'
+            img.src = './Assets/mickey17.jpg';
             break;
 
         case '009':
-            img.src = './Assets/Wicked.png'
+            img.src = './Assets/Wicked.png';
             break;
         case '010':
-            img.src = './Assets/Tangled.jpg'
+            img.src = './Assets/Tangled.jpg';
             break;
+            
     }
 
     return img;
@@ -101,7 +103,6 @@ zones.forEach( id => {
         e.preventDefault();
     })
 
-
     //drop event 
     dropZone.addEventListener('drop', e => {
         e.preventDefault();
@@ -116,14 +117,12 @@ zones.forEach( id => {
         if((id == "bookDropZone" && mediaType == "book")
         || (id == "movieDropZone" && mediaType =="movie")){
             e.target.appendChild(img);
-            console.log(mediaType);
+            
         } else{
-            console.log(mediaType);
-            console.log("Incorrect media type! Please try again.");
+            console.log("Wrong Media Type! Try again.")
         }
 
     })
 
 })
-
 
