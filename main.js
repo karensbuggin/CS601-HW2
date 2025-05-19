@@ -1,6 +1,6 @@
 
 async function fetchMedia() {
-    const apiURL = "./media.json"
+    const apiURL = "https://karensbuggin.github.io/CS601-HW2/media.json"
 
     try {
         const res = await fetch(apiURL);
@@ -27,9 +27,11 @@ const btn = document.getElementById('loadCanvasButton')
         // make images draggable
         img.draggable = true;
 
+        //set random ID number for each media item
         const randomNumber = Math.floor(Math.random() * 1000) + 1;
         img.id = `${media.category}-${randomNumber}`;  
 
+        //Dragstart event to transfer data for each element
         img.addEventListener('dragstart', e =>{
             e.dataTransfer.setData('text/plain', img.id);
         })
@@ -44,8 +46,6 @@ const btn = document.getElementById('loadCanvasButton')
 export function getImage(mediaID){
     const img = document.createElement('img'); //<img></img>
     img.id = mediaID;
-
-    
 
     switch (mediaID) {
         case '001':
@@ -111,7 +111,6 @@ zones.forEach( id => {
 	
 
 	// restricted drop
-
 	const mediaType = img.dataset.mediaType;
         
         if((id == "bookDropZone" && mediaType == "book")
