@@ -1,0 +1,52 @@
+[
+    {
+        "id": "001",
+        "category": "book",
+        "name": "Sula"
+    },
+    {
+        "id": "002",
+        "category": "book",
+        "name": "The Four Winds"
+    },
+    {
+        "id": "003",
+        "category": "book",
+        "name": "Percy Jackson and the Lightning Thief"
+    },
+    {
+        "id": "004",
+        "category": "book",
+        "name": "Dune"
+    },
+    {
+        "id": "005",
+        "category": "book",
+        "name": "The Bluest Eye"
+    },
+    {
+        "id": "005",
+        "category": "movie",
+        "name": "Everything Everywhere All at Once"
+    },
+    {
+        "id": "006",
+        "category": "movie",
+        "name": "Barbie"
+    },
+    {
+        "id": "007",
+        "category": "movie",
+        "name": "Mickey 17"
+    },
+    {
+        "id": "008",
+        "category": "movie",
+        "name": "Wicked"
+    },
+    {
+        "id": "009",
+        "category": "movie",
+        "name": "Tangled"
+    }
+]
